@@ -1,0 +1,603 @@
+
+*{
+
+  margin:0;
+   padding:0;
+   
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.topnav {
+  list-style: none;
+  width: 100%;
+  background-color: white;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  top: 0;
+  z-index:1;
+ 
+}
+.topnav li{
+  display: inline;
+  
+}
+li:last-child {
+  border-right: none;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float:right;
+  display: block;
+  color:black;
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Change the color of links on hover */
+/* .topnav a:hover {
+  background-color: #3B9BC3;
+
+} */
+
+/* Add an active class to highlight the current page */
+
+
+/* Style the active class (and buttons on mouse-over) */
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active, .btn:hover {
+  /* background-color: #666; */
+  color: white;
+}
+
+
+ .header {
+
+  background-image: url(images/bg3.jpg);
+  
+  /* background-image: linear-gradient(to right bottom, #314fa3, #6f71b9, #a097cf, #cbc0e6, #f4ecff); */
+  min-height: 90vh;
+   top: 70px;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   background-repeat: no-repeat;
+   transition: 5s;
+  animation-name:animate;
+animation-direction: alternate-reverse;
+animation-duration:40s;
+animation-fill-mode:forwards ;
+animation-iteration-count: infinite;
+animation-play-state: running;
+animation-timing-function:ease-in-out ;
+
+ }
+ @keyframes animate{
+  0%{
+    background-image: url(images/bg1.jpg);
+    
+  }
+  50%{
+    background-image: url(images/bg3.jpg);
+  
+  }
+
+  100%{
+    background-image: url(images/mbdev2.jpg);
+   
+  }
+
+ }
+ .catchy{
+   width: 90%;
+   position:absolute;
+   top:50%;
+   left:50%;
+   color: #176273;
+   transform:translate(-50%,-50%);
+   /* font-family: "Audiowide", sans-serif; */
+
+  text-align: center;
+   text-shadow: 3px 3px 3px #ababab;
+ }
+ .catchy h1{
+   font-size: 78px;
+   color: #3B9BC3;
+   font-family: "Audiowide", sans-serif;
+ }
+ .catchy p{
+   margin: 10px 0 40px;
+   font-size: 25px;
+   color:#3B9BC3
+ }
+
+
+/* ABout us informations */
+.AboutUs{
+  background-image: linear-gradient(to bottom, #ffffff, #eeedfa, #dadcf5, #c5cbf1, #acbced,
+   #9bb4e9, #87ace5, #72a5e0, #63a3da, #55a0d3, #489ecb, #3b9bc3);
+/* background-image: url(images/electri.jpg); */
+  min-height: 100vh;
+ 
+ 
+
+
+  width: 100%;
+  margin:auto;
+  padding-top:100px;
+
+}
+.AboutUs h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Niconne', cursive;
+  padding-bottom: 5px;
+  position:relative;
+  
+  margin-bottom: 25px;
+ 
+}
+.AboutUs h1::before{
+  content: '';
+  position: absolute;
+  bottom: -8px;
+width: 300px;
+height: 4px;
+background: #3b9bc3;
+}
+.infor{
+  display: flex;
+  margin-top: 15%;
+  width: 90%;
+  /* justify-content: space-between; */
+  padding: 10px;
+  top: 50%;
+  left:50%;
+  transform: translate(4%,-20%);
+  height: 550px;
+  box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
+}
+
+.info1{
+
+  /* background:blue; */
+  box-sizing: border-box;
+  padding: 22px;
+ 
+  /* background-color: white; */
+  text-align: justify;
+  width: calc(60% - 50px);
+  /* height: 100%; */
+
+}
+
+.info1 p{
+  font-size: 18px;
+  text-align: justify;
+  justify-content: flex-start;
+font-family: 'Vollkorn', serif;
+}
+.team p{
+  font-size: 18px;
+  text-align: justify;
+  justify-content: flex-start;
+font-family: 'Vollkorn', serif;
+
+}
+
+.imagebox{
+
+width: calc(40% + 50px);
+
+border-bottom: 350px solid transparent;
+/* background-color: #ffffff; */
+margin: 5%;
+background-image: url(images/bg3.jpg);
+background-position: center;
+background-size: cover;
+position: relative;
+background-repeat: no-repeat;
+transition: 5s;
+height: 80%;
+
+}
+
+.container{
+ 
+  background-image: linear-gradient(to left top, #ffffff, #e3e5eb, #c5cdd7, #a4b6c1, #82a0aa);
+  margin:auto;
+  width:85%;
+  height: 80vh;
+  padding: 50px;
+  text-align: center;
+  box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
+}
+.servCon{
+ width: 100%;
+  margin:auto;
+  background-image: linear-gradient(to bottom, #3b9bc3, #489ecb, #55a0d3, #63a3da,
+   #72a5e0, #87ace5, #9bb4e9, #acbced, #c5cbf1, #dadcf5, #eeedfa, #ffffff);
+ height: 100vh;
+
+ 
+
+  
+}
+.container h1{
+  text-align:center;
+  text-decoration: underline;
+  transition: 0.3s;
+
+}
+.startPro{
+margin-bottom: 20px;
+border: 4px solid #3b9bc3;
+
+height: 50px;
+width: 400px;
+margin: 0 auto;
+padding-top: 30px;
+border-radius: 10px;
+
+}
+.container a{
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  
+  text-decoration: none;
+}
+.startPro:hover{
+  background-color: #3b9bc3;
+  transition: 0.5s;
+  }
+
+.container p{
+  text-align: center;
+}
+.services{
+  margin-top: 5%;
+  display: flex;
+
+  padding: 10px;
+  justify-content: space-between;
+}
+.serv1{
+  flex-basis: 25%;
+  /* background:#DADDE2; */
+  border-radius:2px solid  #F4ECFF;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
+  box-sizing: border-box;
+  border-radius: 10px;
+
+
+}
+.serv1 h2{
+  text-align: center;
+  font-size: 30px;
+}
+.serv1 a{
+  /* display: inline-block;
+  text-decoration: none;*/
+  border: 3px solid #3b9bc3; 
+  padding:12px 14px;
+  font-size: 16px;
+  border-radius: 15px;
+  color:black;
+width: 20%;
+ margin-top: 5%;
+font-weight: bold; 
+margin: 0 auto;
+height: 20px;
+  cursor: pointer;
+
+}
+.iconIMG{
+  display: inline-block;
+  width:70px;
+  height:70px;
+  /* background-color: black; */
+  border: 3px solid #000;
+  transform: rotate(45deg);
+  margin-top: 20px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+.iconIMG i{
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+}
+ /* .services:hover.iconIMG{
+background: #82ccdd;
+ } */
+ .servList{
+   text-align: center;
+   font-size: 20px;
+
+ }
+
+ .servList p{
+   text-align: center;
+   font-size: 24px;
+   margin-right: 10px;
+ }
+.serv1 a:hover{
+  background-color: #3b9bc3;
+  }
+.serv1 p{
+ justify-content: center;
+  font-size: 18px;
+  padding: 10px;
+}
+/* .serv1:hover{
+  background-color: #3b9bc3;;
+  transition: 0.5s;
+  } */
+
+
+
+.Testimonails{
+background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb, #929fba);
+  width: 100%;
+  min-height: 60vh;
+  margin-bottom: 0px;
+  margin-top:5%;
+  overflow-x: hidden;
+
+  /* z-index: 200px; */
+}
+.testFlex{
+  margin: 10%;
+  display: flex;
+ justify-content: space-between;
+ height: 30em;
+
+}
+
+.headertest .catchy{
+  font-size: 50px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.headertest {
+  font-size: 3.5rem;
+  font-family: 'Courgette', cursive;
+  margin: 0 auto;
+ text-align:  center;
+}
+.secon{
+  color: #3b9bc3;
+}
+.TestBox{
+  flex-basis: 30%;
+  background: #fff;
+  border-radius:5px solid #DADDE2;
+  margin-bottom: 5%;
+  padding: 0px;
+
+  box-sizing: border-box;
+}
+.TestImg{
+  margin:0 auto;
+  margin-bottom: 5%;
+  height: 7em;
+  width: 7em;
+  
+  border-radius: 50%;
+  }
+  .TestImg img{
+    margin:0 auto;
+    margin-bottom: 5%;
+    height: 7em;
+    width: 7em;
+    
+    border-radius: 50%;
+    }
+    .stars{
+      color: #3b9bc3;
+      margin: 20px;
+      font-size: 1.6rem;
+      justify-content: center;
+      text-align: center;
+     
+    }
+  .TestAuthor{
+    height: 3em;
+    /* background-color: green; */
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    justify-content: center;
+    /* box-shadow: 5px 10px #3b9bc3; */
+
+  }
+  .TestCont{
+    margin: 5%;
+    height: 8em;
+    /* background-color: green; */
+ 
+    text-align: justify;
+    justify-content: center;
+   font-size: 1.25rem;
+
+    /* box-shadow: 5px 10px #3b9bc3; */
+  }
+img{
+  margin:0 auto;
+  margin-bottom: 5%;
+  height: 7em;
+  width: 7em;
+}
+
+
+.Footer{
+  width:100%;
+  margin-top: 0px;
+  color: white;
+  height: 30vh;
+  background-color: #333333;
+
+}
+.footinfor{
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.infoUs{
+  flex-basis: 23%;
+  padding: 3px;
+  margin: 3px;
+}
+.infoUs .logo {
+ 
+  height: 10em;
+  width: 50%;
+  margin-left: 70px;
+  margin-top: 50px;
+  
+}
+
+.infoUs h2{
+  padding-bottom: 5px;
+  position:relative;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: white;
+
+}
+.infoUs ul{
+  list-style: none;
+
+}
+.serv1 ul{
+  list-style: none;
+}
+.serv1 ul li{
+  padding: 10px 0;
+  text-align: center;
+  font-size: 22px;
+  
+}
+
+.infoUs ul li{
+  padding: 10px 0;
+}
+.infoUs ul li a{
+  color: white;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.infoUs ul li a:hover{
+  color: white;
+  
+  opacity: 1;
+}
+.infoUs h2::before{
+content: '';
+position:absolute;
+bottom: -8px;
+width: 80px;
+height: 4px;
+background: #3b9bc3;
+}
+
+
+.infoUs a{
+  padding: 3px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+.copyright{
+  width: 100%;
+  background-color: #333333;
+  height: 15%;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .TestFlex{
+    flex:100%;
+    max-width: 100%;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    font-family: "Audiowide", sans-serif;
+    text-align: right;
+    color: black;
+  }
+  .TestFlex{
+    flex:100%;
+    max-width: 100%;
+  }
+}

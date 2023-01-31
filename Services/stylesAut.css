@@ -1,0 +1,200 @@
+*{
+
+  margin:0;
+   padding:0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.Software{
+background-image: linear-gradient( #ffffff , #d2d3db 70%, #424c4b 30%,
+    #ffffff);
+  /* background-image:url(ImageServ/mbdev2.jpg); */
+  min-height: 100vh;
+
+   top: 0;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   opacity: 0.9;
+}
+.backImg{
+  width: 96%;
+  min-height:40vh;
+  /* background-image:url(C:\Users\lihle\Desktop\rootfolder\images\mbdev2.jpg); */
+
+
+  margin: 0 auto;
+
+}
+.backImg img{
+  width: 100%;
+height: 25em;
+}
+
+.topnav {
+  /* background-color: #333; */
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float:right;
+  display: block;
+   color:black;
+  text-align: center;
+
+  font-family: 'Vollkorn', serif;
+  padding: 14px 16px;
+  text-decoration: none;
+top:15px;
+  font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #ACA9BB;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.FlexSof{
+  display:flex;
+  width: 90%;
+
+  padding: 10px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.Info{
+  flex-basis: 42%;
+  background:#DADDE2;
+    margin-top: 5%;
+  height: 50em;
+  border-radius:2px solid  #F4ECFF;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+.content h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Audiowide", sans-serif;
+}
+.content p{
+  text-align: justify;
+  justify-content: center;
+  font-size: 22px;
+}
+.Projects h1{
+
+  text-align: center;
+  font-size: 30px;
+  font-family: "Audiowide", sans-serif;
+  }
+  .Projects p{
+    text-align: justify;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .ProgLang{
+    margin-top: 5%;
+    padding: 5px;
+
+  }
+  .ProgLang ul{
+    padding: 5px;
+    font-size: 25px;
+
+  }
+  .contectUSS{
+    margin-top: 5%;
+    border: 2px solid #424c4b;
+    padding: 5px;
+  }
+  .submitBut{
+    width: 30%;
+    height:3em;
+    margin: 0 auto;
+  }
+  .Footer{
+    width:100%;
+    margin-top: 0px;
+    color: white;
+    background-color: #333333;
+  
+  }
+  .footinfor{
+  
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .infoUs{
+    flex-basis: 23%;
+    padding: 3px;
+    margin: 3px;
+  }
+  .infoUs h2{
+    padding-bottom: 5px;
+    position:relative;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: white;
+  
+  }
+  .infoUs ul{
+    list-style: none;
+  
+  }
+  
+  .infoUs ul li{
+    padding: 10px 0;
+  }
+  .infoUs ul li a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  .infoUs ul li a:hover{
+    color: white;
+    
+    opacity: 1;
+  }
+  .infoUs h2::before{
+  content: '';
+  position:absolute;
+  bottom: -8px;
+  width: 80px;
+  height: 4px;
+  background: #3b9bc3;
+  }
+  
+  
+  .infoUs a{
+    padding: 3px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+  }
+  .copyright{
+    width: 100%;
+    background-color: #333333;
+    height: 15%;
+    text-align: center;
+  
+  }
+  
