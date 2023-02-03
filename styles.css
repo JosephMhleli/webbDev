@@ -64,18 +64,39 @@ li:last-child {
 }
 
 /* Style the active class (and buttons on mouse-over) */
-.active, .btn:hover {
-  /* background-color: #666; */
+.topnav a.active {
+  background-color: #04AA6D;
   color: white;
 }
-
-
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
  .header {
 
   background-image: url(images/bg3.jpg);
   
   /* background-image: linear-gradient(to right bottom, #314fa3, #6f71b9, #a097cf, #cbc0e6, #f4ecff); */
-  min-height: 90vh;
+  min-height: 100vh;
    top: 70px;
    background-position: center;
    background-size: cover;
@@ -129,6 +150,58 @@ animation-timing-function:ease-in-out ;
    font-size: 25px;
    color:#3B9BC3
  }
+ /*-----------------------------------
+ dont touch this secction------
+ this is the responsice section for the landing page*/
+ @media  screen and  (max-width: 770px){
+  .header {
+
+    background-image: url(images/bg3.jpg);
+    
+    /* background-image: linear-gradient(to right bottom, #314fa3, #6f71b9, #a097cf, #cbc0e6, #f4ecff); */
+    min-height: 40vh;
+     top: 70px;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     background-repeat: no-repeat;
+     transition: 5s;
+    animation-name:animate;
+  animation-direction: alternate-reverse;
+  animation-duration:40s;
+  animation-fill-mode:forwards ;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function:ease-in-out ;
+  
+   }
+   @keyframes animate{
+    0%{
+      background-image: url(images/bg1.jpg);
+      
+    }
+    50%{
+      background-image: url(images/bg3.jpg);
+    
+    }
+  
+    100%{
+      background-image: url(images/mbdev2.jpg);
+     
+    }
+  
+   }
+  .catchy h1{
+  font-size: 2rem;
+  
+  }
+  .catchy p{
+    margin: 10px 0 40px;
+    font-size: 1rem;
+    color:black
+  }
+ 
+} 
 
 
 /* ABout us informations */
@@ -160,7 +233,8 @@ animation-timing-function:ease-in-out ;
   content: '';
   position: absolute;
   bottom: -8px;
-width: 300px;
+width: 250px;
+margin: 0 auto;
 height: 4px;
 background: #3b9bc3;
 }
@@ -223,10 +297,10 @@ height: 80%;
 
 .container{
  
-  background-image: linear-gradient(to left top, #ffffff, #e3e5eb, #c5cdd7, #a4b6c1, #82a0aa);
+  /* background-image: linear-gradient(to left top, #ffffff, #e3e5eb, #c5cdd7, #a4b6c1, #82a0aa); */
   margin:auto;
   width:85%;
-  height: 80vh;
+  height: 90vh;
   padding: 50px;
   text-align: center;
   box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
@@ -236,7 +310,10 @@ height: 80%;
   margin:auto;
   background-image: linear-gradient(to bottom, #3b9bc3, #489ecb, #55a0d3, #63a3da,
    #72a5e0, #87ace5, #9bb4e9, #acbced, #c5cbf1, #dadcf5, #eeedfa, #ffffff);
+   background-size:contain;
+	background-repeat:no-repeat;
  height: 100vh;
+ overflow: hidden;
 
  
 
@@ -248,6 +325,7 @@ height: 80%;
   transition: 0.3s;
 
 }
+
 .startPro{
 margin-bottom: 20px;
 border: 4px solid #3b9bc3;
@@ -274,23 +352,74 @@ border-radius: 10px;
 .container p{
   text-align: center;
 }
+/*Responsive for about us page*/
+@media  screen and  (max-width: 770px){
+  .AboutUs h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Niconne', cursive;
+  padding-bottom: 5px;
+  position:relative;
+  
+  margin-bottom: 25px;
+ 
+}
+.AboutUs h1::before{
+  content: '';
+  position: absolute;
+  bottom: -8px;
+width: 300px;
+margin: 0 auto;
+height: 4px;
+background: #3b9bc3;
+}
+  .infor{
+margin-top: 10%;
+    display: flex;
+    display: inline-block;
+    flex-direction: column;
+  }
+
+  .info1{
+flex: 100%;
+
+    /* background:blue; */
+    box-sizing: border-box;
+    padding: 22px;
+   
+    /* background-color: white; */
+    text-align: justify;
+    width: 100%;
+    /* height: 100%; */
+  
+  }
+
+  .imagebox{
+    background-image: none;
+  }
+} 
+/*THe end of the services for responsive side*/
+/*----------Don't remove these lines*/
+/*----------------------------------------------------*/
 .services{
   margin-top: 5%;
   display: flex;
-
+  margin: 2%;
   padding: 10px;
   justify-content: space-between;
+  overflow: hidden;
 }
 .serv1{
-  flex-basis: 25%;
+  flex-basis: 30%;
   /* background:#DADDE2; */
   border-radius:2px solid  #F4ECFF;
   margin-bottom: 5%;
-  padding: 20px 12px;
+  /* padding: 20px 12px; */
   box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
   box-sizing: border-box;
+  
   border-radius: 10px;
-
+height: 20em;
 
 }
 .serv1 h2{
@@ -314,24 +443,63 @@ height: 20px;
 
 }
 .iconIMG{
+width: 100%;
+height: 100%;
+position: relative;
+border-color: #333333;
+}
+
+.iconIMG img{
   display: inline-block;
-  width:70px;
-  height:70px;
+  width:100%;
+  height:100%;
+  object-fit: fill;
   /* background-color: black; */
-  border: 3px solid #000;
-  transform: rotate(45deg);
-  margin-top: 20px;
-  margin-bottom: 16px;
-  transition: 0.3s;
+  transition: 1s;
 }
-.iconIMG i{
-  line-height: 70px;
-  transform: rotate(-45deg);
-  font-size: 26px;
+.textCon{
+  margin: 2%;
 }
- /* .services:hover.iconIMG{
-background: #82ccdd;
- } */
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.5),#151e3d);
+  opacity: 0;
+  transition: 1s;
+}
+.iconIMG:hover .overlay{
+  opacity: 1;
+}
+.textCon{
+  width: 80%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+hr{
+  background: #fff;
+  height: 2px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+
+}
+.textCon p {
+  font-size: 14px;
+color: white;
+}
+.iconIMG:hover .textCon{
+bottom:10%;
+opacity: 1;
+}
  .servList{
    text-align: center;
    font-size: 20px;
@@ -351,21 +519,78 @@ background: #82ccdd;
   font-size: 18px;
   padding: 10px;
 }
+
 /* .serv1:hover{
   background-color: #3b9bc3;;
   transition: 0.5s;
   } */
-
-
-
+/*Responsive for services*/
+@media  screen and  (max-width: 770px){
+  .services{
+    margin-top: 5%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    margin: 2%;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 1;
+    
+    
+  }
+  .serv1{
+   height: fit-content;
+   display: inline-block;
+     font-size: 1rem;
+     
+  } 
+  .iconIMG{
+    width: 100%;
+    height: 10%;
+    border-color: #333333;
+    }
+    .iconIMG img{
+      display: inline-block;
+      width:50%;
+      height:50%;
+      object-fit: fill;
+      /* background-color: black; */
+      transition: 1s;
+    }
+    .container{
+ 
+      /* background-image: linear-gradient(to left top, #ffffff, #e3e5eb, #c5cdd7, #a4b6c1, #82a0aa); */
+      margin:auto;
+      width:85%;
+      height: 70vh;
+      padding: 50px;
+      text-align: center;
+      box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
+      z-index: 1;
+    
+    }
+  
+   
+     
+    
+      
+    }
+ 
+/*THe end of the services for responsive side*/
+/*----------Don't remove these lines*/
+/*----------------------------------------------------*/
 .Testimonails{
 background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb, #929fba);
   width: 100%;
   min-height: 60vh;
   margin-bottom: 0px;
   margin-top:5%;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-size:contain;
+  /* display: inline-block; */
+	background-repeat:no-repeat;
 
+z-index: 1;
   /* z-index: 200px; */
 }
 .testFlex{
@@ -373,6 +598,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
   display: flex;
  justify-content: space-between;
  height: 30em;
+ z-index: 1;
 
 }
 
@@ -423,21 +649,23 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
   background: #fff;
   border-radius:5px solid #DADDE2;
   margin-bottom: 5%;
-  padding: 0px;
+  padding: 20px;
 
   box-sizing: border-box;
 }
 .TestImg{
   margin:0 auto;
   margin-bottom: 5%;
-  height: 7em;
-  width: 7em;
-  
-  border-radius: 50%;
+  height: 8em;
+  width: 8em;
+ box-sizing: border-box ;
+ text-align: center;
+ border: 8px solid #3B9BC3;
+   border-radius: 50%; 
   }
   .TestImg img{
-    margin:0 auto;
-    margin-bottom: 5%;
+   margin: 0 auto;
+  text-align: center;
     height: 7em;
     width: 7em;
     
@@ -454,9 +682,8 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
   .TestAuthor{
     height: 3em;
     /* background-color: green; */
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: justify;
+ 
+    text-align: center;
     justify-content: center;
     /* box-shadow: 5px 10px #3b9bc3; */
 
@@ -478,41 +705,81 @@ img{
   height: 7em;
   width: 7em;
 }
+/*Responsive for services*/
+/*----------------------------------------------*/
+/*-----------------------------dont remove these lines*/
+@media  screen and  (max-width: 770px)
+{
+  .headertest {
+    font-size: 1.5rem;
+    font-family: 'Courgette', cursive;
+    margin: 0 auto;
+   text-align:  center;
+   padding-top: 20%;
+  }
 
+  .testFlex{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    display: inline;
+    
+    overflow: hidden;
+  }
+  .TestBox{
+   
+    background: #fff;
+    border-radius:5px solid #DADDE2;
+    margin-bottom: 5%;
+    padding: 20px;
+  height: 25em;
+    box-sizing: border-box;
+  }
+  .stars{
+    color: #3b9bc3;
+    margin: 20px;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+   
+  }
+  .Testimonails{
+    padding-top: 30%;
+  }
+} 
 
+/*THe end of the services for responsive side*/
+/*----------Don't remove these lines*/
+/*----------------------------------------------------*/
 .Footer{
   width:100%;
   margin-top: 0px;
   color: white;
-  height: 30vh;
+  /* height: 30vh; */
   background-color: #333333;
+  /* overflow: hidden; */
+  
 
 }
 .footinfor{
 
   display: flex;
   justify-content: space-between;
+  padding:20px;
 
 }
 
 .infoUs{
   flex-basis: 23%;
   padding: 3px;
-  margin: 3px;
+  margin: 0 auto;
 }
-.infoUs .logo {
- 
-  height: 10em;
-  width: 50%;
-  margin-left: 70px;
-  margin-top: 50px;
-  
-}
+
 
 .infoUs h2{
   padding-bottom: 5px;
   position:relative;
-  font-size: 22px;
+  font-size: 1.7rem;
   margin-bottom: 25px;
   color: white;
 
@@ -521,6 +788,7 @@ img{
   list-style: none;
 
 }
+
 .serv1 ul{
   list-style: none;
 }
@@ -535,9 +803,17 @@ img{
   padding: 10px 0;
 }
 .infoUs ul li a{
-  color: white;
+  color: #fff;
   text-decoration: none;
   opacity: 0.5;
+  
+  transition: 0.5s;
+}
+.infoUs ul li a i{
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.5;
+  padding: 1%;
   transition: 0.5s;
 }
 .infoUs ul li a:hover{
@@ -556,8 +832,9 @@ background: #3b9bc3;
 
 
 .infoUs a{
-  padding: 3px;
-  font-size: 14px;
+/*   padding: 3px; */
+  /* margin: 0 auto; */
+  font-size: 1.25rem;
   color: white;
   text-decoration: none;
 }
@@ -569,7 +846,7 @@ background: #3b9bc3;
 
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -579,10 +856,53 @@ background: #3b9bc3;
     flex:100%;
     max-width: 100%;
   }
-}
+} */
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+/*Responsive for Footer*/
+/*----------------------------------------------*/
+/*-----------------------------dont remove these lines*/
+@media  screen and  (max-width: 770px){
+  /* .infoUs{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+  
+  
+  } */
+  .footinfor{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    display: inline;
+    
+    overflow: hidden;
+  }
+  .infoUs h2{
+    padding-bottom: 5px;
+    
+    position:relative;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: white;
+  
+  }
+  .infoUs a{
+    /*   padding: 3px; */
+      /* margin: 0 auto; */
+      font-size: 1.0rem;
+      color: white;
+      
+      text-decoration: none;
+    }
+ 
+} 
+
+/*THe end of the Footer section for responsive side*/
+/*----------Don't remove these lines*/
+/*----------------------------------------------------*/
+/* @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
@@ -600,4 +920,4 @@ background: #3b9bc3;
     flex:100%;
     max-width: 100%;
   }
-}
+} */
