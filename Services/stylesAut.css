@@ -7,16 +7,17 @@ html {
   scroll-behavior: smooth;
 }
 .Software{
-background-image: linear-gradient( #ffffff , #d2d3db 70%, #424c4b 30%,
-    #ffffff);
-  /* background-image:url(ImageServ/mbdev2.jpg); */
-  min-height: 100vh;
-
-   top: 0;
-   background-position: center;
-   background-size: cover;
+  width: 100%;
+  margin:auto;
+  background: linear-gradient(to bottom, #7c9494 0%, #7c9494 15%, #F8F8F8 15%, #F8F8F8 100%);
+   background-size:contain;
    position: relative;
+	 background-repeat:no-repeat;
+   overflow:hidden;
    opacity: 0.9;
+   min-height: 100vh;
+  
+   /* overflow: hidden; */
 }
 .backImg{
   width: 96%;
@@ -33,24 +34,26 @@ height: 25em;
 }
 
 .topnav {
-  /* background-color: #333; */
-  overflow: hidden;
-  position: fixed;
+  list-style: none;
   width: 100%;
+  background-color:#ababab;
+  position: -webkit-sticky; /* Safari */
+  position: fixed;
+  top: 0;
+  z-index:1;
+ 
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float:right;
   display: block;
-   color:black;
+  color:black;
   text-align: center;
-
   font-family: 'Vollkorn', serif;
-  padding: 14px 16px;
+  padding: 16px;
   text-decoration: none;
-top:15px;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 /* Change the color of links on hover */
@@ -69,24 +72,55 @@ top:15px;
 .topnav .icon {
   display: none;
 }
-
-.FlexSof{
-  display:flex;
-  width: 90%;
-
-  padding: 10px;
-  justify-content: space-between;
-  margin: 0 auto;
+.servPara{
+  width: 60%;
+  height: 5em;
+  margin:0 auto;
+position: relative;
+  /* background-color: #D9D9D9; */
+  font-size: 1.5rem;
+  border:10px solid #D9D9D9;
+  z-index: 1;
 }
-.Info{
-  flex-basis: 42%;
-  background:#DADDE2;
-    margin-top: 5%;
-  height: 50em;
-  border-radius:2px solid  #F4ECFF;
-  margin-bottom: 5%;
-  padding: 20px 12px;
-  box-sizing: border-box;
+.divOverlay{
+  width: 60%;
+  height: 6em;
+  margin:0 auto;
+position: relative;
+  background-color: #D9D9D9;
+  font-size: 1.5rem;
+
+  transform:translate(-25px,110px) ;
+  z-index: 3;
+}
+.softheader h1{
+  font-size: 3rem;
+  text-align: center;
+ 
+  color:#748c8c
+}
+
+.servHeader{
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 auto;
+
+
+
+}
+.servHeader p{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 25px;
+  margin: 0 auto;
+
+
+}
+.paraGRa{
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+
 }
 .content h1{
   text-align: center;
@@ -98,59 +132,78 @@ top:15px;
   justify-content: center;
   font-size: 22px;
 }
-.Projects h1{
 
-  text-align: center;
-  font-size: 30px;
-  font-family: "Audiowide", sans-serif;
-  }
-  .Projects p{
-    text-align: justify;
-    justify-content: center;
-    font-size: 22px;
-  }
-  .ProgLang{
-    margin-top: 5%;
-    padding: 5px;
 
-  }
-  .ProgLang ul{
-    padding: 5px;
-    font-size: 25px;
-
-  }
+ 
   .contectUSS{
     margin-top: 5%;
-    border: 2px solid #424c4b;
-    padding: 5px;
+    
   }
+  .contectUSS form{
+    
+    border: 2px solid #424c4b;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 50%;
+  }
+  .formLabel{
+    margin: 0 auto;
+    justify-content: center;
+  
+  }
+  .formName{
+    margin: 0 auto;
+    justify-content: center;
+    
+  
+  }
+  .formLabel{
+    margin: 0 auto;
+    justify-content: center;
+  
+  }
+  .formLabel{
+    margin: 0 auto;
+    justify-content: center;
+  
+  }
+
   .submitBut{
     width: 30%;
-    height:3em;
+    height:20px;
     margin: 0 auto;
   }
   .Footer{
     width:100%;
     margin-top: 0px;
     color: white;
-    background-color: #333333;
+    /* height: 30vh; */
+    background-color: #333;
+    /* overflow: hidden; */
+    
   
   }
   .footinfor{
   
     display: flex;
     justify-content: space-between;
+    padding:20px;
   
   }
+  
   .infoUs{
     flex-basis: 23%;
     padding: 3px;
-    margin: 3px;
+    margin: 0 auto;
   }
+  
+  
   .infoUs h2{
     padding-bottom: 5px;
     position:relative;
-    font-size: 22px;
+    font-size: 1.7rem;
     margin-bottom: 25px;
     color: white;
   
@@ -160,13 +213,31 @@ top:15px;
   
   }
   
+  .serv1 ul{
+    list-style: none;
+  }
+  .serv1 ul li{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 22px;
+    
+  }
+  
   .infoUs ul li{
     padding: 10px 0;
   }
   .infoUs ul li a{
-    color: white;
+    color: #fff;
     text-decoration: none;
     opacity: 0.5;
+    
+    transition: 0.5s;
+  }
+  .infoUs ul li a i{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+    padding: 1%;
     transition: 0.5s;
   }
   .infoUs ul li a:hover{
@@ -180,21 +251,74 @@ top:15px;
   bottom: -8px;
   width: 80px;
   height: 4px;
-  background: #3b9bc3;
+  background: #748c8c;
   }
   
   
   .infoUs a{
-    padding: 3px;
-    font-size: 14px;
+  /*   padding: 3px; */
+    /* margin: 0 auto; */
+    font-size: 1.25rem;
     color: white;
     text-decoration: none;
   }
   .copyright{
     width: 100%;
-    background-color: #333333;
+    background-color: #ababab;
     height: 15%;
     text-align: center;
   
   }
   
+  /* @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .TestFlex{
+      flex:100%;
+      max-width: 100%;
+    }
+  } */
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  /*Responsive for Footer*/
+  /*----------------------------------------------*/
+  /*-----------------------------dont remove these lines*/
+  @media  screen and  (max-width: 770px){
+    /* .infoUs{
+      margin: 10%;
+      display: flex;
+      flex-direction: column;
+     justify-content: space-between;
+    
+    
+    } */
+    .footinfor{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      display: inline;
+      
+      overflow: hidden;
+    }
+    .infoUs h2{
+      padding-bottom: 5px;
+      
+      position:relative;
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: white;
+    
+    }
+    .infoUs a{
+      /*   padding: 3px; */
+        /* margin: 0 auto; */
+        font-size: 1.0rem;
+        color: white;
+        
+        text-decoration: none;
+      }
+   
+  } 
