@@ -88,39 +88,6 @@ li:last-child {
   display: none;
 }
 
-  @media (max-width :768px) and (min-width: 326px)
-   {
-    .topnav a {
-      float:right;
-      display: block;
-      color:white;
-      text-align: center;
-      font-family: 'Vollkorn', serif;
-      padding: 8px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-    .catchy{
-      width: 50%;
-    
-      /* bottom:40%; */
-    
-      background-color: white;
-      color: #176273;
-   margin-left: 25%;
-      /* font-family: "Audiowide", sans-serif; */
-   
-     text-align: center;
-     box-shadow:0px 0px 17px 10px rgba(0,0,0,0.75);
-      text-shadow: 3px 3px 3px #ababab;
-    }
-    .catchy h1{
-      font-size: 12px;
-      color: #878c8e;
-      font-family: "Audiowide", sans-serif;
-      padding :3%;
-    }
-  }
 
  .header {
 
@@ -146,12 +113,12 @@ animation-timing-function:ease-in-out ;
  @keyframes animate{
   0%{
     background-image: url(images/bg1.jpg);
-    opacity: 0.7;
+    opacity: 1;
     
   }
   33%{
     background-image: url(images/bg3.jpg);
-  opacity: 0.7;
+  opacity: 1;
   }
   67%{
     background-image: url(images/bg2.jpg);
@@ -159,7 +126,7 @@ animation-timing-function:ease-in-out ;
   }
   100%{
     background-image: url(images/bg4.jpg);
-   opacity: 0.8;
+   opacity: 1;
   }
 
  } 
@@ -250,8 +217,49 @@ margin-left: 25%;
     font-size: 1rem;
     color:black
   }
- 
-} 
+
+   .topnav a {
+     float:right;
+     display: block;
+     color:white;
+     text-align: center;
+     font-family: 'Vollkorn', serif;
+     padding: 8px;
+     text-decoration: none;
+     font-size: 1rem;
+   }
+   .catchy{
+     width: 50%;
+   
+     /* bottom:40%; */
+   
+     /*background-color: white;*/
+     color: #176273;
+  margin-left: 25%;
+     /* font-family: "Audiowide", sans-serif; */
+  
+    text-align: center;
+    box-shadow:0px 0px 17px 10px rgba(0,0,0,0.75);
+     text-shadow: 3px 3px 3px #ababab;
+   }
+   .catchy h1{
+     font-size: 20px;
+     color: #878c8e;
+     font-family: "Audiowide", sans-serif;
+     padding :3%;
+   }
+   .startbtn{
+    text-decoration: none;
+    background-color: #ababab;
+    box-sizing: border-box;
+    color: black;
+    border: 2px solid #7cbdb9;
+    padding: 2%;
+    font-size: 1rem;
+   }
+ }
+
+
 
 
 /* ABout us informations */
@@ -318,7 +326,7 @@ margin-left: 25%;
 }
 
 
-/** For tablet devices **/
+/** For tablet devices  aboutus page**/
 @media(max-width:768px) and (min-width:326px){
   .aboutcontainer{
     width: 100%;
@@ -329,9 +337,28 @@ margin-left: 25%;
    position: absolute;
    background-repeat: no-repeat;
   }
+  .aboutinfo p{
+    font-size:0.8rem;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    
+  }
+  .aboutinfo{
+    width: 80%;
+    position:absolute;
+    
+    height: 60%;
+    /* background-color: white; */
+    color: #176273;
+    margin-left: 10%;
+    justify-content: center;
+  }
 
 }
-/** media responsiveness about us page*/
+/** end media responsiveness about us page*/
+
+
 .servCon{
  width: 100%;
   margin:auto;
@@ -339,7 +366,7 @@ margin-left: 25%;
    background-size:contain;
    position: relative;
 	background-repeat:no-repeat;
- height: 100vh;
+ min-height: 100vh;
  color:#3a3a3a;
  overflow: hidden;
  
@@ -371,18 +398,49 @@ margin-left: 25%;
   padding: 5%;
   justify-content: space-between;
   overflow: hidden;
- 
+ /* background-color: red; */
 }
 .serv1{
   flex-basis: 25%;
   margin-bottom: 5%;
+
   /* padding: 20px 12px; */
   box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
   box-sizing: border-box;
-  border:2px solid #333333;
+  /* border-right:10px solid #333333; */
+  position: relative;
   height: 25em;
   background-color:  rgb(234, 234, 234);
+  z-index: 1;
+
 }
+.overlayserv3{
+  position: absolute;
+ height: 25em;
+width: 100%;
+  transform: translate(9.5%, -80%);
+  z-index: -1;
+  border: 10px solid rgb(234, 234, 234);
+ 
+}
+/* .overlayserv2{
+  position: absolute;
+ height: 25em;
+ width: 100%;
+  transform: translate(2.5em, -21em);
+  z-index: -1;
+  border: 10px solid rgb(234, 234, 234);
+ 
+}
+.overlayserv1{
+  position: absolute;
+ height: 25em;
+width: 100%;
+  transform: translate(2.5em, -21em);
+  z-index: -1;
+  border: 10px solid rgb(234, 234, 234);
+ 
+} */
 .serv1 h2{
   text-align: center;
   font-size: 30px;
@@ -446,37 +504,43 @@ margin-top:16px;
 @media  (max-width:768px) and  (min-width:326px){
   .serv1 h2{
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    position: relative;
+  }
+  .serv1 h2::before{
+    content: "";
+    position: absolute;
+    bottom: 2%;
+    width: 20%;
+    height: 2px;
+    background-color: #7c9494;
+    margin: 0 auto;
   }
   .container h1{
     text-align:center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: underline;
     transition: 0.5s;
   
   }
-  
-  
-  
-  
   .container p{
     text-align: center;
-    font-size:1.2rem ;
+    font-size:0.8rem ;
   }
   .services{
     display: flex;
     flex-direction: column;
-    margin: 2%;
-    
-    justify-content: space-between;
-    overflow-x:hidden;
-
+   
+    align-items: center;
   }
+  .overlayserv3{
+    display: none;
+  }
+  
   .serv1{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
     box-sizing: border-box;
-    
     width: 90%;
     
   }
@@ -484,11 +548,24 @@ margin-top:16px;
       display: none;
       
       }
-      .serv1 p{
+      .serv1 .iconIMG p{
         justify-content: center;
-         font-size: 12px;
+         font-size: 0.7rem;
          padding: 10px;
        }
+       .serv1 a{
+        border: 3px solid #3a3a3a; 
+        color: #3a3a3a; 
+        text-decoration: none;
+        font-size: 12px;
+        color:#3a3a3a;
+      width: 20%;
+       margin-top: 5%; 
+      text-align: center;
+     
+     ;
+      cursor: pointer;
+      }
 }
  
  
@@ -519,10 +596,14 @@ z-index: 1;
 .headertest h1::before{
   position: absolute;
   content: '';
-  width: 15%;
+  width: 12%;
   height: 4%;
   background-color: #748c8c;
   bottom: 5px;
+}
+.testpa{
+  text-align: center;
+  margin: 2%;
 }
 .slideshow {
   position: relative;
