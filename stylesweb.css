@@ -1,0 +1,338 @@
+*{
+
+  margin:0;
+   padding:0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.Software{
+  width: 100%;
+  margin:auto;
+  background: linear-gradient(to bottom, #7c9494 0%, #7c9494 15%, #F8F8F8 15%, #F8F8F8 100%);
+   background-size:contain;
+   position: relative;
+	 background-repeat:no-repeat;
+   overflow:hidden;
+   opacity: 0.9;
+   min-height: 100vh;
+  
+   /* overflow: hidden; */
+}
+.backImg{
+  width: 96%;
+  min-height:40vh;
+  /* background-image:url(C:\Users\lihle\Desktop\rootfolder\images\mbdev2.jpg); */
+
+
+  margin: 0 auto;
+
+}
+.backImg img{
+  width: 100%;
+height: 25em;
+}
+#sideNav{
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #ababab;
+  z-index: 3;
+  transition:0.5s ;
+}
+nav ul li{
+  list-style: none;
+  margin: 50px 20px;
+}
+nav ul li a{
+text-decoration: none;
+color: white;  
+}
+#menu-Btn{
+  width: 80px;
+  height: 30px;
+  background:#ababab ;
+  position: fixed;
+  right: 30px;
+  top: 0px;
+  border-radius: 3px;
+  z-index: 99;
+  cursor: pointer;
+
+}
+
+#menu-Btn{
+
+  width: 20px;
+  margin-top:5px ;
+}
+@media(max-width: 820px) and (min-width:325px){
+
+  nav ul li a{
+    text-decoration: none;
+    color: white; 
+    font-size:1rem ;
+    }
+    #sideNav{
+      width: 150px;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      top: 0;
+      background: #ababab;
+      z-index: 3;
+      transition:0.5s ;
+    }
+    nav ul li{
+      list-style: none;
+      margin: 15% 20px;
+    }
+}
+
+.servPara{
+  width: 60%;
+  height: 5em;
+  margin:0 auto;
+position: relative;
+  /* background-color: #D9D9D9; */
+  font-size: 1.5rem;
+  border:10px solid #D9D9D9;
+  z-index: 1;
+}
+.divOverlay{
+  width: 60%;
+  height: 6em;
+  margin:0 auto;
+position: relative;
+  background-color: #D9D9D9;
+  font-size: 1.5rem;
+
+  transform:translate(-25px,110px) ;
+  z-index: 3;
+}
+.softheader h1{
+  font-size: 3rem;
+  text-align: center;
+ 
+  color:#748c8c
+}
+
+.servHeader{
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 auto;
+
+
+
+}
+.servHeader p{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 25px;
+  margin: 0 auto;
+
+
+}
+.paraGRa{
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+
+}
+.content h1{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Audiowide", sans-serif;
+}
+.content p{
+  text-align: justify;
+  justify-content: center;
+  font-size: 22px;
+}
+
+
+.container {
+  margin: 50px auto;
+  width: 60%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4285f4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #357ae8;
+}
+
+  .Footer{
+    width:100%;
+    margin-top: 0px;
+    color: white;
+    /* height: 30vh; */
+    background-color: #333;
+    /* overflow: hidden; */
+    
+  
+  }
+  .footinfor{
+  
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+  
+  }
+  
+  .infoUs{
+    flex-basis: 23%;
+    padding: 3px;
+    margin: 0 auto;
+  }
+  
+  
+  .infoUs h2{
+    padding-bottom: 5px;
+    position:relative;
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+    color: white;
+  
+  }
+  .infoUs ul{
+    list-style: none;
+  
+  }
+  
+  .serv1 ul{
+    list-style: none;
+  }
+  .serv1 ul li{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 22px;
+    
+  }
+  
+  .infoUs ul li{
+    padding: 10px 0;
+  }
+  .infoUs ul li a{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+    
+    transition: 0.5s;
+  }
+  .infoUs ul li a i{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+    padding: 1%;
+    transition: 0.5s;
+  }
+  .infoUs ul li a:hover{
+    color: white;
+    
+    opacity: 1;
+  }
+  .infoUs h2::before{
+  content: '';
+  position:absolute;
+  bottom: -8px;
+  width: 80px;
+  height: 4px;
+  background: #748c8c;
+  }
+  
+  
+  .infoUs a{
+  /*   padding: 3px; */
+    /* margin: 0 auto; */
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
+  }
+  .copyright{
+    width: 100%;
+    background-color: #ababab;
+    height: 15%;
+    text-align: center;
+  
+  }
+  
+  /* @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .TestFlex{
+      flex:100%;
+      max-width: 100%;
+    }
+  } */
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  /*Responsive for Footer*/
+  /*----------------------------------------------*/
+  /*-----------------------------dont remove these lines*/
+  @media  screen and  (max-width: 770px){
+    /* .infoUs{
+      margin: 10%;
+      display: flex;
+      flex-direction: column;
+     justify-content: space-between;
+    
+    
+    } */
+    .footinfor{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      display: inline;
+      
+      overflow: hidden;
+    }
+    .infoUs h2{
+      padding-bottom: 5px;
+      
+      position:relative;
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: white;
+    
+    }
+    .infoUs a{
+      /*   padding: 3px; */
+        /* margin: 0 auto; */
+        font-size: 1.0rem;
+        color: white;
+        
+        text-decoration: none;
+      }
+   
+  } 

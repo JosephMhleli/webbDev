@@ -15,21 +15,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Niconne&family=Diplomata+SC&family=Gorditas&family=Josefin+Sans:ital,wght@1,500&family=PT+Serif:ital@1&family=Vast+Shadow&family=Vollkorn&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <div class="topnav">  
-      <ul>
-        <li>
-          <!-- <i class="fa-solid fa-bars"></i> -->
-          <a href="index.html" class="">HOME</a></li>
-          <li><a href="#AboutUs"class="active" >Who we are</a></li>
-          <li><a href="#myservices" class="btn">What we do</a></li>
-          <li><a href="#contact" class="btn">Get in touch</a></li>
-          <li><a href="Services\App&web.html" class="btn">Start a project</a></li>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        
-          </a>
-      </ul> 
-  </div>
+
   <section class = "AboutUs">
+    <div class="header">
+      <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                
+                <li><a href="#contact">CONTACT US</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <div id="menu-Btn">
+    <a href="#" onclick="toggleNav()">&#9776;</a>
+    </div>
     <a id="AboutUs"></a>
     <div class="servPara">
     
@@ -53,3 +55,116 @@
     </div>
    
     </section>
+<section class="Footer">
+  <a id="contact"></a>
+  
+  <div class = "footinfor">
+    <div class = "infoUs">
+      <h2>Opening Hours</h2>
+      <ul>
+        <li>
+         <a href="" ><i class="fa-regular fa-clock"></i> Monday to Friday-09 am to 5pm</a></li>
+         <li><a href="" ><i class="fa-regular fa-clock"></i> Saturday and Sunday - 10am to 1 pm</a></li>
+         <li><a href="" ><i class="fa-regular fa-clock"></i> Public Holiday - 10am to 3pm</a></li>
+         <!-- <li><a href="" ><i class="fas fa-print mr-3"></i> 972894082</a></li> -->
+        
+      </ul>
+    </div>
+    <div class = "infoUs">
+      <h2>Contact us</h2>
+      <ul>
+        <li>
+          <a href="" ><i class="fas fa-home mr-3"></i> Unit 555, Willow Park Manor, Pretoria 0084</a></li>
+          <li><a href="" ><i class="fas fa-envelope mr-3"></i> lihle@mayilaindustries.com</a></li>
+          <li><a href="" ><i class="fas fa-phone mr-3"></i> (+27) 62 618 5420</a></li>
+          <!-- <li><a href="" ><i class="fas fa-print mr-3"></i> 972894082</a></li> -->
+        
+      </ul>
+    </div>
+    <div class = "infoUs">
+      <h2>Customer Care</h2>
+      <ul>
+        <li>
+         <a href="" >Privacy Policy</a></li>
+         <li><a href="" > Terms of service</a></li>
+         <li><a href="" >FAQs</a></li>
+         <!-- <li><a href="" ><i class="fas fa-print mr-3"></i> 972894082</a></li> -->
+        
+      </ul>
+
+    </div>
+    <div class = "infoUs">
+      <h2>Follow Us</h2>
+                <a
+                     class="btn btn-primary btn-floating m-1"
+                     style="background-color: #3b5998"
+                     href="#!"
+                     role="button"
+                     ><i class="fab fa-facebook-f"></i
+                    ></a>
+
+                  <!-- Twitter -->
+                  <a
+                     class="btn btn-primary btn-floating m-1"
+                     style="background-color: #55acee"
+                     href="#!"
+                     role="button"
+                     ><i class="fab fa-twitter"></i
+                    ></a>
+
+                  <!-- Google -->
+
+                  <!-- Instagram -->
+                  <a
+                     class="btn btn-primary btn-floating m-1"
+                     style="background-color: #ac2bac"
+                     href="#!"
+                     role="button"
+                     ><i class="fab fa-instagram"></i
+                    ></a>
+
+                  <!-- Linkedin -->
+                  <a
+                     class="btn btn-primary btn-floating m-1"
+                     style="background-color: #0082ca"
+                     href="#!"
+
+                     ><i class="fab fa-linkedin-in"></i
+                    ></a>
+
+  </div>
+</div>
+
+  
+  
+
+<div class="copyright">
+© 2022 Copyright:
+<a class="text-white" href="https://mdbootstrap.com/"
+>Mayilaindustries.com</a>
+
+</div>
+</section>
+    <script>
+   
+      var menubtn= document.getElementById("menu-Btn")
+      var sidenav= document.getElementById("sideNav")
+      var imgmenu= document.getElementById("menu")
+
+      sidenav.style.right="-250px";
+      menubtn.onclick=function(){
+          if(sidenav.style.right =="-250px"){
+              sidenav.style.right ="0";
+              imgmenu.src="images/close.png";
+          }
+          else
+          sidenav.style.right="-250px";
+          imgmenu.src="images/close.png";
+
+      }
+  
+
+
+</script>
+    </body>
+    </html>

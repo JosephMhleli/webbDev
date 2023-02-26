@@ -14,27 +14,36 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Niconne&family=Diplomata+SC&family=Gorditas&family=Josefin+Sans:ital,wght@1,500&family=PT+Serif:ital@1&family=Vast+Shadow&family=Vollkorn&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<div class="overlayhead"></div>
 
-    <div class="topnav">  
-      <ul>
-        <li>
-          <li><a href="#huis"class="active" >Home</a></li>
-          <li><a href="#AboutUs"class="" >Who we are</a></li>
-          <li><a href="#myservices" class="btn">What we do</a></li>
-          <li><a href="#contact" class="btn">Get in touch</a></li>
-          <li><a href="Services\App&web.html" class="btn">Start a project</a></li>
-         
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa solid fa-bars"></i>
-          </a>
-      </ul> 
-  </div>
-  <!-- <div id="menu-Btn">
-        <img src="images/menu.png" id="menu">
-    </div> -->
+
+  <div id="sideNav">
+    <nav>
+        <ul>
+            <li><a href="#huis">HOME</a></li>
+            <li><a href="#myservices">SERVICES</a></li>
+            <li><a href="#AboutUs">ABOUT US</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+            <li><a href="#barin">TESTIMONIALS</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="menu-Btn">
+<a href="#" onclick="toggleNav()">&#9776;</a>
+</div>
 
 <div class="header">
+  <!-- <div class="topnav">
+    
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div> -->
+ 
   <a id="huis"></a>
           <div class="catchy">
           <h1> EXCELLENCE THROUGH TECHNOLOGY</h1>
@@ -136,7 +145,8 @@
 
 <!-- <div id="rectangle">
 </div> -->
-<section class="Testimonails"> 
+<section class="Testimonails">
+  <a id="barin"></a>
   <div class="headertest"><h1>Testimonials</h1></div>
   <div class="testpa"><p>Discover how our products/services have positively impacted our clients' lives 
     by reading their authentic testimonials</p></div>
@@ -176,7 +186,7 @@
       <div class="testimony">
         <p>"I was skeptical at first, but after using the product for a few days, I can honestly say that it's one of the best investments 
           I've ever made. The design is elegant and sophisticated, and the functionality is unparalleled.
-           I would highly recommend this product to anyone looking for a premium-quality solution."</p>
+           I would highly recommend this company to anyone looking for a premium-quality solution."</p>
         
         <br>
         <div class="TestPo">Project Manager - Keetgen Technologies</div>
@@ -292,6 +302,26 @@
 </div>
 </section>
 <script>
+   
+        var menubtn= document.getElementById("menu-Btn")
+        var sidenav= document.getElementById("sideNav")
+        var imgmenu= document.getElementById("menu")
+
+        sidenav.style.right="-250px";
+        menubtn.onclick=function(){
+            if(sidenav.style.right =="-250px"){
+                sidenav.style.right ="0";
+                imgmenu.src="images/close.png";
+            }
+            else
+            sidenav.style.right="-250px";
+            imgmenu.src="images/close.png";
+
+        }
+    
+</script>
+
+<script>
   const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -310,5 +340,17 @@ document.querySelector('.next-btn').addEventListener('click', () => {
 });
 
 </script>
+<!-- for the navigatiokn bar -->
+<script>
+  const currentLocation = location.href;
+  const menuItems = document.querySelectorAll('.topnav a');
+
+  for (let i = 0; i < menuItems.length; i++) {
+    if (menuItems[i].href === currentLocation) {
+      menuItems[i].classList.add('active');
+    }
+  }
+</script>
+
   </body>
 </html>
