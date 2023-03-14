@@ -72,25 +72,10 @@
 
   
 </div>
-  <div class="contectUSS">
-    <!-- <form name ="form1" method="post" action="#">
-     
-      <div class="formLabel">Enter your Name</div>
-      <div class="formName"><input type="text" name="name" size="50"/></div>
-      <div class="emailLabel">Enter your email</div>
-      <div class="emailName"><input type="text" name="email" size="50"/></div>
-      <div class="ProjLabel">Tell us about your project</div>
-      <div class="ProjName"><textarea name="comments" rows="12" cols="70"/></textarea>
 
-      
-      </div>
-     <div class="submitBut">
-   <input type="submit" value="Submit"/>
-   </div>
-    </form> -->
     <div class="container">
       <h2>Contact Us</h2>
-      <form id="contact-form" method="post" action="">
+      <form id="contact-form" method="post" action="Message.php">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" name="name" required>
@@ -107,7 +92,7 @@
       </form>
     </div>
     
-  </div>
+  
 
 
 
@@ -175,7 +160,7 @@
                   <a
                      class="btn btn-primary btn-floating m-1"
                      style="background-color: #ac2bac"
-                     href="#!"
+                     href="https://www.instagram.com/mayilaindustries/"
                      role="button"
                      ><i class="fab fa-instagram"></i
                     ></a>

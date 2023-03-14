@@ -9,42 +9,59 @@
 html {
   scroll-behavior: smooth;
 }
-#sideNav{
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  top: 0;
-  background: #ababab;
-  z-index: 3;
-  transition:0.5s ;
-}
-nav ul li{
-  list-style: none;
-  margin: 50px 20px;
-}
-nav ul li a{
-text-decoration: none;
-color: white;  
-}
-#menu-Btn{
-  width: 80px;
+#menu-Btn {
+  width: 50px;
   height: 30px;
-  background:#ababab ;
+  background: #0a0d65;
   position: fixed;
   right: 30px;
   top: 0px;
+  padding: 10px;
   border-radius: 3px;
   z-index: 99;
   cursor: pointer;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#menu-Btn{
-
-  width: 20px;
-  margin-top:5px ;
+#menu-Btn i {
+  color: white;
+  font-size: 20px;
 }
+
+#sideNav {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background: #0a0d65;
+  z-index: 3;
+  transition: 0.5s;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#sideNav a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+#sideNav a:hover {
+  background: #fff;
+  color: #0a0d65;
+}
+#sideNav.open {
+  right: 0;
+}
+
 @media(max-width: 820px) and (min-width:325px){
 
   nav ul li a{
@@ -52,20 +69,25 @@ color: white;
     color: white; 
     font-size:1rem ;
     }
-    #sideNav{
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    /* #sideNav{
       width: 150px;
       height: 100vh;
       position: fixed;
       right: 0;
       top: 0;
-      background: #ababab;
+      background: #0a0d65;
       z-index: 3;
       transition:0.5s ;
     }
     nav ul li{
       list-style: none;
       margin: 15% 20px;
-    }
+    } */
 }
 
 
@@ -117,7 +139,7 @@ animation-timing-function:ease-in-out ;
    bottom:40%;
    height: 30%;
    background-color: white;
-   color: #176273;
+   color: #0a0d65;
 margin-left: 25%;
    /* font-family: "Audiowide", sans-serif; */
 
@@ -127,7 +149,7 @@ margin-left: 25%;
  }
  .catchy h1{
    font-size: 3rem;
-   color: #878c8e;
+   color: #0a0d65;
    font-family: "Audiowide", sans-serif;
    padding :3%;
  }
@@ -138,9 +160,9 @@ margin-left: 25%;
  }
  .startbtn{
   text-decoration: none;
-  background-color: #ababab;
+  background-color:  #0a0d65;
   box-sizing: border-box;
-  color: black;
+  color: white;
   border: 2px solid #7cbdb9;
   padding: 2%;
   font-size: 1.5rem;
@@ -189,10 +211,7 @@ margin-left: 25%;
     }
   
    }
-  .catchy h1{
-  font-size: 2rem;
-  
-  }
+
   .catchy p{
     margin: 10px 0 40px;
     font-size: 1rem;
@@ -217,15 +236,15 @@ margin-left: 25%;
    }
    .catchy h1{
      font-size: 20px;
-     color: #878c8e;
+     color: #0a0d65;
      font-family: "Audiowide", sans-serif;
      padding :3%;
    }
    .startbtn{
     text-decoration: none;
-    background-color: #ababab;
+    background-color: #0a0d65;
     box-sizing: border-box;
-    color: black;
+    color: white;
     border: 2px solid #7cbdb9;
     padding: 2%;
     font-size: 1rem;
@@ -240,32 +259,30 @@ margin-left: 25%;
 /* ABout us informations */
 .AboutUs{
   
-  background-image: url(images/bg2.jpg); 
-  min-height: 100vh;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
- 
-
- 
   width: 100%;
-
-
-  padding-top:100px;
+  margin:auto;
+  background: linear-gradient(to right, white 0%, white 50%, #7c9494 50%, #7c9494 100%);
+   background-size:contain;
+   position: relative;
+	background-repeat:no-repeat;
+ min-height: 100vh;
+ color:#3a3a3a;
+ overflow: hidden;
   
 
 }
 
 .aboutinfo{
-  width: 50%;
+  width: 60%;
   position:absolute;
-  
-  height: 60%;
-  /* background-color: white; */
+  box-sizing: border-box;
+  border: solid 4px #ababab;
+  height: 70%;
+  background-color:  rgb(234, 234, 234);
   color: #176273;
-  margin-left: 25%;
+  margin-left: 20%;
   justify-content: center;
+  margin-top: 5%;
 }
 .aboutinfo h1{
   text-align: center;
@@ -288,13 +305,24 @@ margin-left: 25%;
   justify-content: center;
   
 }
-.learnMoreAbt{
+.learnBtn{
+
   height: 8%;
-  /* background-color: red; */
+ width: 10%;
+ background: #0a0d65;
+ color: white !important;
   text-decoration: none;
+  margin-left: 45%;
+ position: absolute;
+bottom: 5%;
+justify-content: center;
+text-align: center;
 
 }
-.learnMoreAbt:hover{
+.learnBtn a{
+  text-decoration: none;
+}
+.learnBtn:hover{
   
   background-color: #748c8c;
   border: #748c8c;
@@ -304,13 +332,28 @@ margin-left: 25%;
 /** For tablet devices  aboutus page**/
 @media(max-width:768px) and (min-width:326px){
   .aboutcontainer{
-  width: 100%;
-   background-image: url(images/bg3.jpg);
-   min-height: 120vh;
-   background-position: center;
-   background-size: cover;
-   position: absolute;
-   background-repeat: no-repeat;
+    width: 100%;
+  margin:auto;
+  background: linear-gradient(to right, white 0%, white 50%, #7c9494 50%, #7c9494 100%);
+   background-size:contain;
+   position: relative;
+	background-repeat:no-repeat;
+ min-height: 100vh;
+ color:#3a3a3a;
+ overflow: hidden;
+  }
+  .aboutinfo{
+    width: 80%;
+    position:absolute;
+    box-sizing: border-box;
+    border: solid 4px #ababab;
+    height: 80%;
+    background-color:  rgb(234, 234, 234);
+    color: #176273;
+    margin-left: 20%;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 10%;
   }
   .aboutinfo p{
     font-size:0.7rem;
@@ -319,17 +362,24 @@ margin-left: 25%;
     color: black;
     
   }
-  .aboutinfo{
-    width: 80%;
-    position:absolute;
-    
-    height: 60%;
-    /* background-color: white; */
-    color: #176273;
-    margin-left: 10%;
-    justify-content: center;
-  }
 
+  .learnBtn{
+    text-decoration: none;
+    height: 8%;
+   width: 30%;
+   background: #0a0d65;
+   color: white !important;
+    text-decoration: none;
+    margin-left: 45%;
+   position: absolute;
+  bottom: 5%;
+  justify-content: center;
+  text-align: center;
+ 
+}
+.learnBtn h3{
+  font-size: 1rem;
+}
 }
 /** end media responsiveness about us page*/
 
@@ -364,110 +414,109 @@ margin-left: 25%;
 /*THe end of the services for responsive side*/
 /*----------Don't remove these lines*/
 /*----------------------------------------------------*/
-.services
-{
-  margin-top: 5%;
+.servCon {
+  padding: 100px 0;
+}
+
+.services {
   display: flex;
-  position: absolute;
-  margin: 2%;
-  padding: 5%;
-  justify-content: space-between;
-  overflow: hidden;
- /* background-color: red; */
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.serv1{
-  flex-basis: 25%;
-  margin-bottom: 5%;
 
-  /* padding: 20px 12px; */
-  box-shadow:0px 0px 17px -5px rgba(0,0,0,0.75);
-  box-sizing: border-box;
-  /* border-right:10px solid #333333; */
+.serv1 {
   position: relative;
-  height: 25em;
-  background-color:  rgb(234, 234, 234);
+  width: 30%;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.serv1 .iconIMG {
+  position: relative;
   z-index: 1;
-
-}
-.overlayserv3{
-  position: absolute;
- height: 25em;
-width: 100%;
-  transform: translate(9.5%, -80%);
-  z-index: -1;
-  border: 10px solid rgb(234, 234, 234);
- 
-}
-/* .overlayserv2{
-  position: absolute;
- height: 25em;
- width: 100%;
-  transform: translate(2.5em, -21em);
-  z-index: -1;
-  border: 10px solid rgb(234, 234, 234);
- 
-}
-.overlayserv1{
-  position: absolute;
- height: 25em;
-width: 100%;
-  transform: translate(2.5em, -21em);
-  z-index: -1;
-  border: 10px solid rgb(234, 234, 234);
- 
-} */
-.serv1 h2{
   text-align: center;
-  font-size: 30px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s;
 }
-.serv1 a{
-  border: 3px solid #3a3a3a; 
-  padding:12px 14px;
+
+.serv1 .iconIMG:hover {
+  transform: translateY(-10px);
+}
+
+.serv1:hover .overlayserv3 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.iconab {
+  display: inline-block;
+  background: #0b77bd;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 24px;
+  line-height: 50px;
+  transition: background 0.5s;
+}
+
+.iconab:hover {
+  background: #fff;
+  color: #0b77bd;
+}
+
+.serv1 h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.2em;
+  color: #555;
+}
+
+.serv1 p {
+  margin: 0 0 10px;
+  color: #888;
   font-size: 16px;
-  color:#3a3a3a;
-width: 20%;
- margin-top: 5%; 
-text-align: center;
-border-radius: 20px;
-height: 20px;
-cursor: pointer;
+  line-height: 1.5em;
 }
 
-.iconab{
-  /* background-color: red; */
-
-  width: 20%;
-  height: 20%;
-  margin: 0 auto;
- 
-}
-.serv1 .iconIMG i{
-font-size: 3rem;
-text-align: center;
-
-margin-top:16px;
-}
- .servList{
-   text-align: center;
-   font-size: 20px;
-
- }
-.LearnBtn{
-  text-decoration: none;
-}
-
- .serv1 h3{
+.serv1 h3 {
+  margin: 0;
   text-align: center;
+  padding-top: 20px;
+  font-size: 16px;
+}
 
- }
-.serv1 a:hover{
-  background-color: #7c9494;
-  border: 3px solid #7c9494; 
-  }
-.serv1 .iconIMG p{
- justify-content: center;
-  font-size: 1rem;
-  padding: 10px;
+.LearnBtn {
+  display: inline-block;
+  background: #0b77bd;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 16px;
+  transition: background 0.5s;
+}
+
+.LearnBtn:hover {
+  background: #fff;
+  color: #0b77bd;
+}
+
+.overlayserv3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #0b77bd;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.5s ease-out;
 }
 
 
@@ -524,7 +573,7 @@ margin-top:16px;
     
   }
     .serv1 .iconIMG i{
-      display: none;
+      
       
       }
       .serv1 .iconIMG p{

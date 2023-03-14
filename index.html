@@ -18,18 +18,19 @@
 
   <div id="sideNav">
     <nav>
-        <ul>
-            <li><a href="#huis">HOME</a></li>
-            <li><a href="#myservices">SERVICES</a></li>
-            <li><a href="#AboutUs">ABOUT US</a></li>
-            <li><a href="#contact">CONTACT US</a></li>
-            <li><a href="#barin">TESTIMONIALS</a></li>
-        </ul>
+      <ul>
+        <li><a href="#huis" onclick="closeNav()">HOME</a></li>
+        <li><a href="#myservices" onclick="closeNav()">SERVICES</a></li>
+        <li><a href="#AboutUs" onclick="closeNav()">ABOUT US</a></li>
+        <li><a href="#contact" onclick="closeNav()">CONTACT US</a></li>
+        <li><a href="#barin" onclick="closeNav()">TESTIMONIALS</a></li>
+      </ul>
     </nav>
 </div>
 <div id="menu-Btn">
-<a href="#" onclick="toggleNav()">&#9776;</a>
+  <button id="menu-icon">&#9776;</button>
 </div>
+
 
 <div class="header">
   <!-- <div class="topnav">
@@ -123,7 +124,7 @@
   <a id="AboutUs"></a>
   <div class="aboutinfo">
    <h1>Who we are</h1>
-   <br><br>
+   <br>
    <p>
     At Mayila Industries, we believe in the power of technology to solve complex problems and make our world 
     a better place. Our team of highly qualified and experienced engineers is dedicated to delivering exceptional
@@ -138,7 +139,10 @@
     the latest tools and technology to bring your vision to life, and we always strive to provide creative advice 
     and diplomatic solutions to even the most difficult problems.
      So why wait? Let's work together to build a brighter future, today!</p><br>
-      <h3><a class="learnMoreAbt" href="about.html">Learn More</a></h3>
+      
+    </div>
+    <div class="learnBtn">
+      <h3><a  href="about.html">Learn More</a></h3>
     </div>
   </section>
 
@@ -231,7 +235,7 @@
       <ul>
         <li>
           <a href="" ><i class="fas fa-home mr-3"></i> Unit 555, Willow Park Manor, Pretoria 0084</a></li>
-          <li><a href="" ><i class="fas fa-envelope mr-3"></i> lihle@mayilaindustries.com</a></li>
+          <li><a href="" ><i class="fas fa-envelope mr-3"></i> info@mayilaindustries.com</a></li>
           <li><a href="" ><i class="fas fa-phone mr-3"></i> (+27) 62 618 5420</a></li>
           <!-- <li><a href="" ><i class="fas fa-print mr-3"></i> 972894082</a></li> -->
         
@@ -274,7 +278,7 @@
                   <a
                      class="btn btn-primary btn-floating m-1"
                      style="background-color: #ac2bac"
-                     href="#!"
+                     href="https://www.instagram.com/mayilaindustries/"
                      role="button"
                      ><i class="fab fa-instagram"></i
                     ></a>
@@ -302,25 +306,60 @@
 </div>
 </section>
 <script>
-   
-        var menubtn= document.getElementById("menu-Btn")
-        var sidenav= document.getElementById("sideNav")
-        var imgmenu= document.getElementById("menu")
+// Get elements
+var menuBtn = document.getElementById("menu-Btn");
+var sideNav = document.getElementById("sideNav");
+var menuIcon = document.getElementById("menu-icon");
 
-        sidenav.style.right="-250px";
-        menubtn.onclick=function(){
-            if(sidenav.style.right =="-250px"){
-                sidenav.style.right ="0";
-                imgmenu.src="images/close.png";
-            }
-            else
-            sidenav.style.right="-250px";
-            imgmenu.src="images/close.png";
+// Add event listener to menu button
+menuBtn.addEventListener("click", function() {
+  // Toggle sideNav open or closed
+  sideNav.classList.toggle("open");
+  
+  // Change menu icon
+  if (sideNav.classList.contains("open")) {
+    menuIcon.innerHTML = "&#10006;";
+  } else {
+    menuIcon.innerHTML = "&#9776;";
+  }
+});
 
-        }
-    
+// Add event listener to document for closing sideNav
+document.addEventListener("click", function(event) {
+  // Check if target element is not the sideNav or menuBtn and sideNav is open
+  if (!sideNav.contains(event.target) && !menuBtn.contains(event.target) && sideNav.classList.contains("open")) {
+    sideNav.classList.remove("open");
+    menuIcon.innerHTML = "&#9776;";
+  }
+});
+
 </script>
+<script>
+  function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
+const servElems = document.querySelectorAll('.serv1');
+
+function animateServ() {
+  servElems.forEach(servElem => {
+    const servPos = servElem.getBoundingClientRect().top;
+    const winHeight = window.innerHeight;
+    if (servPos < winHeight * 0.8) {
+      servElem.style.transform = "translateX(0%)";
+      servElem.style.opacity = 1;
+    }
+  })
+}
+
+window.addEventListener('scroll', animateServ);
+</script>
 <script>
   const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;

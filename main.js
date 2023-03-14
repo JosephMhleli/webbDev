@@ -12,17 +12,14 @@ form.addEventListener("submit", (event) => {
   formData.append("message", messageInput.value);
   
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "message.php",true);
+  xhr.open("POST", "send.php",true);
   xhr.onload = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      let response = xhr.response;
-      console.log(response);
-      alert("Message sent successfully!");
+    if (xhr.status === 200) {
+      alert("Email sent successfully!");
       form.reset();
     } else {
       alert("Error sending email.");
     }
   };
-  
   xhr.send(formData);
 });
