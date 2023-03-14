@@ -45,7 +45,7 @@ html {
   }
 
   #menu-Btn {
-    width: 80px;
+    width: 50px;
     height: 30px;
     background: #0a0d65;
     position: fixed;
@@ -92,6 +92,9 @@ html {
   #sideNav a:hover {
     background: #fff;
     color: #0a0d65;
+  }
+  #sideNav.open {
+    right: 0;
   }
   @media(max-width: 820px) and (min-width:325px){
   

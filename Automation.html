@@ -43,7 +43,7 @@
  
   </div>
   <div id="menu-Btn">
-  <a href="#" onclick="toggleNav()">&#9776;</a>
+    <button id="menu-icon">&#9776;</button>
   </div>
   </div>
 
@@ -200,22 +200,31 @@
   </section>
   <script>
    
-    var menubtn= document.getElementById("menu-Btn")
-    var sidenav= document.getElementById("sideNav")
-    var imgmenu= document.getElementById("menu")
+   var menuBtn = document.getElementById("menu-Btn");
+var sideNav = document.getElementById("sideNav");
+var menuIcon = document.getElementById("menu-icon");
 
-    sidenav.style.right="-250px";
-    menubtn.onclick=function(){
-        if(sidenav.style.right =="-250px"){
-            sidenav.style.right ="0";
-            imgmenu.src="images/close.png";
-        }
-        else
-        sidenav.style.right="-250px";
-        imgmenu.src="images/close.png";
+// Add event listener to menu button
+menuBtn.addEventListener("click", function() {
+  // Toggle sideNav open or closed
+  sideNav.classList.toggle("open");
+  
+  // Change menu icon
+  if (sideNav.classList.contains("open")) {
+    menuIcon.innerHTML = "&#10006;";
+  } else {
+    menuIcon.innerHTML = "&#9776;";
+  }
+});
 
-    }
-
+// Add event listener to document for closing sideNav
+document.addEventListener("click", function(event) {
+  // Check if target element is not the sideNav or menuBtn and sideNav is open
+  if (!sideNav.contains(event.target) && !menuBtn.contains(event.target) && sideNav.classList.contains("open")) {
+    sideNav.classList.remove("open");
+    menuIcon.innerHTML = "&#9776;";
+  }
+});
 
 
 </script>
