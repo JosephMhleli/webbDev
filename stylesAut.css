@@ -42,7 +42,7 @@ text-decoration: none;
 color: white;  
 }
 #menu-Btn {
-  width: 50px;
+  width: 20px;
   height: 30px;
   background: #0a0d65;
   position: fixed;
@@ -300,13 +300,13 @@ textarea {
     opacity: 1;
   }
   .infoUs h2::before{
-  content: '';
-  position:absolute;
-  bottom: -8px;
-  width: 80px;
-  height: 4px;
-  background: #748c8c;
-  }
+    content: '';
+    position:absolute;
+    bottom: -8px;
+    width: 80px;
+    height: 4px;
+    background: #0b77bd;
+    }
   
   
   .infoUs a{

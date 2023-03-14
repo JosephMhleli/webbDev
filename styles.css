@@ -10,9 +10,9 @@ html {
   scroll-behavior: smooth;
 }
 #menu-Btn {
-  width: 50px;
+  width: 20px;
   height: 30px;
-  background: #0a0d65;
+  background: #0b77bd;
   position: fixed;
   right: 30px;
   top: 0px;
@@ -36,7 +36,7 @@ html {
   position: fixed;
   right: -250px;
   top: 0;
-  background: #0a0d65;
+  background: #0b77bd;
   z-index: 3;
   transition: 0.5s;
 }
@@ -56,7 +56,7 @@ ul {
 
 #sideNav a:hover {
   background: #fff;
-  color: #0a0d65;
+  color: #0b77bd;
 }
 #sideNav.open {
   right: 0;
@@ -139,7 +139,7 @@ animation-timing-function:ease-in-out ;
    bottom:40%;
    height: 30%;
    background-color: white;
-   color: #0a0d65;
+   color: #0b77bd;
 margin-left: 25%;
    /* font-family: "Audiowide", sans-serif; */
 
@@ -149,7 +149,7 @@ margin-left: 25%;
  }
  .catchy h1{
    font-size: 3rem;
-   color: #0a0d65;
+   color: #0b77bd;
    font-family: "Audiowide", sans-serif;
    padding :3%;
  }
@@ -160,7 +160,7 @@ margin-left: 25%;
  }
  .startbtn{
   text-decoration: none;
-  background-color:  #0a0d65;
+  background-color:  #0b77bd;
   box-sizing: border-box;
   color: white;
   border: 2px solid #7cbdb9;
@@ -236,13 +236,13 @@ margin-left: 25%;
    }
    .catchy h1{
      font-size: 20px;
-     color: #0a0d65;
+     color: #0b77bd;
      font-family: "Audiowide", sans-serif;
      padding :3%;
    }
    .startbtn{
     text-decoration: none;
-    background-color: #0a0d65;
+    background-color: #7c9494;
     box-sizing: border-box;
     color: white;
     border: 2px solid #7cbdb9;
@@ -309,7 +309,7 @@ margin-left: 25%;
 
   height: 8%;
  width: 10%;
- background: #0a0d65;
+ background: #0b77bd;
  color: white !important;
   text-decoration: none;
   margin-left: 45%;
@@ -367,7 +367,7 @@ text-align: center;
     text-decoration: none;
     height: 8%;
    width: 30%;
-   background: #0a0d65;
+   background: #0b77bd;
    color: white !important;
     text-decoration: none;
     margin-left: 45%;
@@ -500,7 +500,9 @@ text-align: center;
   font-size: 16px;
   transition: background 0.5s;
 }
-
+.LearnBtn a {
+  text-decoration: none;
+}
 .LearnBtn:hover {
   background: #fff;
   color: #0b77bd;
@@ -572,10 +574,7 @@ text-align: center;
     width: 90%;
     
   }
-    .serv1 .iconIMG i{
-      
-      
-      }
+   
       .serv1 .iconIMG p{
         justify-content: center;
          font-size: 0.7rem;
@@ -626,7 +625,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
   content: '';
   width: 12%;
   height: 4%;
-  background-color: #748c8c;
+  background-color: #0b77bd;
   bottom: 5px;
 }
 .testpa{
@@ -863,7 +862,7 @@ position:absolute;
 bottom: -8px;
 width: 80px;
 height: 4px;
-background: #748c8c;
+background: #0b77bd;
 }
 
 
