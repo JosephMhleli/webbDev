@@ -18,7 +18,7 @@ form.addEventListener("submit", (event) => {
       alert("Email sent successfully!");
       form.reset();
     } else {
-      alert("Error sending email.");
+      alert("Message not sent. Use email below");
     }
   };
   xhr.send(formData);

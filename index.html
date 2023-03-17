@@ -307,6 +307,7 @@
 </section>
 <script>
 // Get elements
+// Get elements
 var menuBtn = document.getElementById("menu-Btn");
 var sideNav = document.getElementById("sideNav");
 var menuIcon = document.getElementById("menu-icon");
@@ -324,6 +325,25 @@ menuBtn.addEventListener("click", function() {
   }
 });
 
+// Add event listener to links in sideNav
+var links = sideNav.getElementsByTagName("a");
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function(event) {
+    // Get target section ID from href attribute
+    var sectionId = event.target.getAttribute("href").substring(1);
+    
+    // Scroll to target section
+    document.getElementById(sectionId).scrollIntoView();
+    
+    // Close sideNav
+    sideNav.classList.remove("open");
+    menuIcon.innerHTML = "&#9776;";
+    
+    // Prevent default link behavior
+    event.preventDefault();
+  });
+}
+
 // Add event listener to document for closing sideNav
 document.addEventListener("click", function(event) {
   // Check if target element is not the sideNav or menuBtn and sideNav is open
@@ -333,32 +353,11 @@ document.addEventListener("click", function(event) {
   }
 });
 
-</script>
-<script>
-  function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+// Function to close sideNav
+function closeNav() {
+  sideNav.classList.remove("open");
+  menuIcon.innerHTML = "&#9776;";
 }
-
-const servElems = document.querySelectorAll('.serv1');
-
-function animateServ() {
-  servElems.forEach(servElem => {
-    const servPos = servElem.getBoundingClientRect().top;
-    const winHeight = window.innerHeight;
-    if (servPos < winHeight * 0.8) {
-      servElem.style.transform = "translateX(0%)";
-      servElem.style.opacity = 1;
-    }
-  })
-}
-
-window.addEventListener('scroll', animateServ);
 </script>
 <script>
   const slides = document.querySelectorAll('.slide');

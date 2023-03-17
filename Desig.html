@@ -24,9 +24,9 @@
           <ul>
               <li><a href="index.html">HOME</a></li>
               <li><a href="about.html">ABOUT US</a></li>
-              
               <li><a href="#contact">CONTACT US</a></li>
-              
+              <li><a href="App&web.html">SOFT DEV</a></li>
+              <li><a href="Automation.html">AUTOMATION</a></li>
           </ul>
       </nav>
   </div>
@@ -180,7 +180,8 @@
   </div>
   </section>
   <script>
- var menuBtn = document.getElementById("menu-Btn");
+ // Get elements
+var menuBtn = document.getElementById("menu-Btn");
 var sideNav = document.getElementById("sideNav");
 var menuIcon = document.getElementById("menu-icon");
 
@@ -197,6 +198,25 @@ menuBtn.addEventListener("click", function() {
   }
 });
 
+// Add event listener to links in sideNav
+var links = sideNav.getElementsByTagName("a");
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function(event) {
+    // Get target section ID from href attribute
+    var sectionId = event.target.getAttribute("href").substring(1);
+    
+    // Scroll to target section
+    document.getElementById(sectionId).scrollIntoView();
+    
+    // Close sideNav
+    sideNav.classList.remove("open");
+    menuIcon.innerHTML = "&#9776;";
+    
+    // Prevent default link behavior
+    event.preventDefault();
+  });
+}
+
 // Add event listener to document for closing sideNav
 document.addEventListener("click", function(event) {
   // Check if target element is not the sideNav or menuBtn and sideNav is open
@@ -205,6 +225,13 @@ document.addEventListener("click", function(event) {
     menuIcon.innerHTML = "&#9776;";
   }
 });
+
+// Function to close sideNav
+function closeNav() {
+  sideNav.classList.remove("open");
+  menuIcon.innerHTML = "&#9776;";
+}
+
 </script>
 <script src = "main.js"></script>
   </body>
