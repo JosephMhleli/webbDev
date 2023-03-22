@@ -115,7 +115,7 @@ animation-timing-function:ease-in-out ;
  }
  @keyframes animate{
   0%{
-    background-image: url(images/bg1.jpg);
+    background-image: url(images/bg2.jpg);
     opacity: 1;
     
   }
@@ -124,7 +124,7 @@ animation-timing-function:ease-in-out ;
   opacity: 1;
   }
   67%{
-    background-image: url(images/bg2.jpg);
+    background-image: url(images/bg1.jpg);
   opacity: 1;
   }
   100%{
@@ -195,22 +195,25 @@ margin-left: 25%;
   animation-timing-function:ease-in-out ;
   
    }
-   @keyframes animate{
-    0%{
-      background-image: url(images/bg1.jpg);
-      
-    }
-    50%{
-      background-image: url(images/bg3.jpg);
-    
-    }
-  
-    100%{
-      background-image: url(images/mbdev2.jpg);
-     
-    }
-  
-   }
+   
+    @keyframes animate{
+      0%{
+        background-image: url(images/bg2.jpg);
+        opacity: 1;
+        
+      }
+      33%{
+        background-image: url(images/bg3.jpg);
+      opacity: 1;
+      }
+      67%{
+        background-image: url(images/bg1.jpg);
+      opacity: 1;
+      }
+      100%{
+        background-image: url(images/bg4.jpg);
+       opacity: 1;
+      }}
 
   .catchy p{
     margin: 10px 0 40px;
@@ -493,6 +496,7 @@ text-align: center;
 .LearnBtn {
   display: inline-block;
   background: #0b77bd;
+  text-decoration: none;
   color: #fff;
   border-radius: 30px;
   padding: 10px 30px;
@@ -590,8 +594,27 @@ text-align: center;
        margin-top: 5%; 
       text-align: center;
      
-     ;
+     
       cursor: pointer;
+      }
+      .LearnBtn a{
+      
+        text-align: center;
+      }
+      .LearnBtn {
+        width:100%;
+     display:inline-block;
+        background: #0b77bd;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 30px;
+        
+        text-align: center;
+        font-size: 12px;
+        transition: background 0.5s;
+      }
+      .iconIMG h3{
+        text-align: center;
       }
 }
  
@@ -683,7 +706,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
 
 
     .stars{
-      color: #748c8c;
+      color: #b39a0d;
       margin: 20px;
       font-size: 2rem;
       justify-content: center;
@@ -692,7 +715,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
     }
     .TestPo{
       font-size: 1.5rem;
-      font-weight: bold;
+     
     }
     .testname{
       font-size: 1.2rem;
@@ -760,7 +783,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
 }
 .TestPo{
   font-size: 1.2rem;
-  font-weight: bold;
+ 
 }
   .testFlex{
     display: flex;
@@ -771,7 +794,7 @@ background-image: linear-gradient(to bottom, #ffffff, #e6e6ed, #cbcddc, #afb6cb,
     overflow: hidden;
   }
   .stars{
-    color: #748c8c;
+    color: #b39a0d;
     margin: 20px;
     font-size: 1rem;
     justify-content: center;

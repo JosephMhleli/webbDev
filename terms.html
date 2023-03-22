@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Terms and Conditions | MAYLA INDUSTRIES</title>
+    <link rel="stylesheet" type="text/css" href="styleterms.css">
+  </head>
+  <body>
+    <div id="sideNav">
+        <nav>
+          <ul>
+            <li><a href="index.html" onclick="closeNav()">HOME</a></li>
+            
+            <li><a href="about.html" onclick="closeNav()">ABOUT US</a></li>
+            <li><a href="#contact" onclick="closeNav()">CONTACT US</a></li>
+            
+          </ul>
+        </nav>
+    </div>
+    <div id="menu-Btn">
+      <button id="menu-icon">&#9776;</button>
+    </div>
+    <div class="header">
+        <h1>
+            TERMS AND CONDITIONS OF USE</h1>
+      
+            <p>Welcome to [Company Name]! These terms and 
+              conditions govern your use of our website and services. 
+              By using our website and services, you agree to these terms 
+              and conditions. If you do not agree to these terms and conditions, please do not use our website 
+              or services.
+           </p>
+    </div>
+    <div class="content">
+      
+      
+      <h2>1. Definitions</h2>
+      <div class="know">
+      <ul>
+        <li>"Company" means MAYILA INDUSTRIES, the owner of this website and provider of our services.</li>
+        <li>"Services" means the website design, automation, and modeling services provided by the Company.</li>
+        <li>"Website" means the website located at [Website URL].</li>
+      </ul>
+    </div>
+      <h2>2. Use of Website</h2>
+      <p>You may use our website for lawful purposes only. You may not use our website:</p>
+      <div class="know">
+      <ul>
+        <li>In any way that violates any applicable law or regulation;</li>
+        <li>In any way that infringes upon the rights of others;</li>
+        <li>To transmit or upload any viruses, malware, or other harmful software;</li>
+        <li>To collect or harvest any information from other users;</li>
+        <li>To interfere with or disrupt our website or services.</li>
+      </ul>
+    </div>
+      <h2>3. Intellectual Property</h2>
+      <p>The content on our website, including but not limited to text, graphics, 
+        logos, and images, is owned by the Company and is protected by intellectual 
+        property laws. You may not use or reproduce any content from our website 
+        without our prior written consent.</p>
+      
+      
+      <h2>4. Disclaimer of Warranties</h2>
+      <p>We make no representations or warranties of any kind, express or implied, 
+        regarding the content or functionality of our website or services. We do not
+         warrant that our website or services will be uninterrupted or error-free, or 
+         that any defects will be corrected.</p>
+      
+      <h2>5. Limitation of Liability</h2>
+      <p>In no event shall the Company be liable for any direct, indirect, incidental, special, or 
+        consequential damages arising out of or in connection with the use of our website 
+        or services, including but not limited to loss of profits, data, or other intangible
+         losses.</p>
+      
+         <h2>6. Indemnification</h2>
+       <p>You agree to indemnify and hold harmless the Company, its affiliates, officers, directors, employees, 
+        and agents from any and all claims, damages, expenses, and liabilities 
+        arising out of or in connection with your use of our website or services.</p>
+
+        <h2>7. Termination</h2>
+        <p>We may terminate or suspend your access to our website or services at any time, without prior notice or liability, 
+            for any reason whatsoever, including but not limited to a breach of these terms and conditions.</p>
+      
+        <h2>8. Governing Law</h2>
+        <p>These terms and conditions shall be governed by and construed in accordance with the laws of South Africa, 
+            without regard to its conflict of law provisions.</p>
+
+            <h2>9. Changes to Terms and Conditions</h2>
+            <p>We may update these terms and conditions from time to time without notice to you.
+                 Your continued use of our website or services after any changes to these terms and 
+                 conditions shall constitute your acceptance of such changes.</p>
+            <h2>Contact Us</h2>
+      <a id="contact"></a>
+      <p>If you have any questions or concerns about these terms and conditions, please contact us at info@mayilaindustries.</p>
+      
+    </div>
+    <script>
+        // Get elements
+        // Get elements
+        var menuBtn = document.getElementById("menu-Btn");
+        var sideNav = document.getElementById("sideNav");
+        var menuIcon = document.getElementById("menu-icon");
+        
+        // Add event listener to menu button
+        menuBtn.addEventListener("click", function() {
+          // Toggle sideNav open or closed
+          sideNav.classList.toggle("open");
+          
+          // Change menu icon
+          if (sideNav.classList.contains("open")) {
+            menuIcon.innerHTML = "&#10006;";
+          } else {
+            menuIcon.innerHTML = "&#9776;";
+          }
+        });
+        
+        // Add event listener to links in sideNav
+        var links = sideNav.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener("click", function(event) {
+            // Get target section ID from href attribute
+            var sectionId = event.target.getAttribute("href").substring(1);
+            
+            // Scroll to target section
+            document.getElementById(sectionId).scrollIntoView();
+            
+            // Close sideNav
+            sideNav.classList.remove("open");
+            menuIcon.innerHTML = "&#9776;";
+            
+            // Prevent default link behavior
+            event.preventDefault();
+          });
+        }
+        
+        // Add event listener to document for closing sideNav
+        document.addEventListener("click", function(event) {
+          // Check if target element is not the sideNav or menuBtn and sideNav is open
+          if (!sideNav.contains(event.target) && !menuBtn.contains(event.target) && sideNav.classList.contains("open")) {
+            sideNav.classList.remove("open");
+            menuIcon.innerHTML = "&#9776;";
+          }
+        });
+        
+        // Function to close sideNav
+        function closeNav() {
+          sideNav.classList.remove("open");
+          menuIcon.innerHTML = "&#9776;";
+        }
+        </script>
+  </body>
+</html>
